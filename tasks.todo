@@ -1,0 +1,37 @@
+
+Configuration:
+ ✔ github API key details as an environment variable (document how to do this) @done (14-02-25 21:03)
+ ☐ json config file to list repos to track
+ ✔ DB connection to be an ENV variable @done (14-02-26 11:18)
+
+Documentation:
+ ☐ All the config stuff
+ ☐ A script to generate the db table?
+
+Testing:
+ ☐ What do we use elsewhere?
+
+Getting data from Github:
+ ☐ Look at existing modules for this
+ ☐ Connect to the API
+
+Saving the data:
+✔ Connect app to the database @done (14-02-25 21:03)
+☐ Function to save a single item to the database
+☐ Function to clear the database
+
+Cron process:
+☐ Add data from the last [2] hours (overwrites should not duplicate)
+
+Querying the data:
+
+
+ Exposing the data:
+ ☐ API to query the data
+
+Management tools:
+ ☐ Option to reset and rebuild the DB
+
+＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
+Archive:
+ ✔ Setup a table in the database @done (14-02-25 16:57)
