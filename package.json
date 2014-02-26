@@ -24,6 +24,8 @@
   "dependencies": {
     "express": "~3.4.8",
     "logfmt": "~0.21.0",
-    "mysql": "~2.1.0"
+    "mysql": "~2.1.0",
+    "async": "~0.2.10",
+    "github": "~0.1.14"
   }
 }

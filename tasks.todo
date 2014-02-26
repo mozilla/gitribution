@@ -1,8 +1,6 @@
 
 Configuration:
- ✔ github API key details as an environment variable (document how to do this) @done (14-02-25 21:03)
  ☐ json config file to list repos to track
- ✔ DB connection to be an ENV variable @done (14-02-26 11:18)
 
 Documentation:
  ☐ All the config stuff
@@ -16,8 +14,6 @@ Getting data from Github:
  ☐ Connect to the API
 
 Saving the data:
-✔ Connect app to the database @done (14-02-25 21:03)
-☐ Function to save a single item to the database
 ☐ Function to clear the database
 
 Cron process:
@@ -34,4 +30,8 @@ Management tools:
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
 Archive:
+ ✔ github API key details as an environment variable (document how to do this) @done (14-02-25 21:03) @project(Configuration)
+ ✔ DB connection to be an ENV variable @done (14-02-26 11:18) @project(Configuration)
+ ✔ Connect app to the database @done (14-02-25 21:03)
+ ✔ Function to save a single item to the database @done (14-02-26 15:12)
  ✔ Setup a table in the database @done (14-02-25 16:57)
