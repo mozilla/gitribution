@@ -1,58 +1,89 @@
-var async     = require('async');
-var data      = require('./lib/data');
-var GitHubApi = require("github");
-var to_track = require("./to_track");
+var async       = require('async');
+var toTrack     = require("./to_track");
+var data        = require("./lib/data");
+var githubLogic = require("./lib/github_logic");
+var async       = require('async');
 
 
-var github = new GitHubApi({
-  version: "3.0.0",
-  protocol: "https"
+// Get our JSON config file
+var orgs = toTrack.repos['github_organizations'];
+
+
+// Just using this while testing things
+data.resetDatabaseYesIreallyWantToDoThis(function resetAttempted () {
+  console.log('Reset Complete');
+
+  fetchAllTheData(orgs, function allDataFetched () {
+    console.log('All data fetched');
+  });
 });
 
-github.authenticate({
-  type: "basic",
-  username: process.env.GITHUB_USERNAME,
-  password: process.env.GITHUB_PASSWORD
-});
 
+function fetchAllTheData (orgs, callback) {
+  // Iterate through the list of repos we care about
 
+  var orgNames = []
+  var repos = []
 
-var orgs = to_track.repos["github_organizations"];
+  // Synchronously sort this for querying
+  // Github Organisations
+  for(var i = 0; i < orgs.length; i++) {
 
-// Orgs
-for(var i = 0; i < orgs.length; i++) {
-  var org = orgs[i];
-  var org_name = org.name;
-  console.log(org_name);
+    var org = orgs[i];
+    var githubOrgName = org.name;
+    orgNames.push(githubOrgName);
 
-  // Teams
-  var org_teams = org.teams;
-  for(var j = 0; j < org_teams.length; j++) {
-    var team = org_teams[j];
-    console.log("--" + team.name);
+    // Mozilla Team Names
+    var orgTeams = org.teams;
+    for(var j = 0; j < orgTeams.length; j++) {
 
-    // Repos
-    var team_repos = team.repos;
-    for (var k = 0; k < team_repos.length; k++) {
-      var repo = team_repos[k];
-      console.log("----" + repo);
-    };
+      var team = orgTeams[j];
+      var mozTeamName = team.name;
+
+      // Repos within each team
+      var teamRepos = team.repos;
+      for (var k = 0; k < teamRepos.length; k++) {
+
+        var githubRepoName = teamRepos[k];
+
+        repos.push({
+          githubOrgName: githubOrgName,
+          mozTeamName: mozTeamName,
+          githubRepoName: githubRepoName
+        });
+      };
+    }
   }
+
+  // two activities to save in parallel
+  async.parallel([
+      function(callback){
+        // Members activity
+        githubLogic.updateMembersLists(orgNames, function membersUpdated (err) {
+          if (err) console.error(err);
+          else console.log("All organization member lists updated");
+          callback(null);
+        })
+      },
+      function(callback){
+        // Commit activity
+        githubLogic.updateContributionActivityForList(repos, function contributionsUpdated (err, res) {
+          if (err) console.error(err);
+          else console.log("All contribution activity updated");
+          callback(null);
+        })
+      }
+  ],
+  function(err, results){
+    if (err) console.error(err);
+    console.log('Finished fetching data. Yay.');
+  });
+
 }
 
-console.log("------")
-
-data.saveItem("magic");
-data.saveItem("toast");
-data.saveItem("pancakes");
 
 
-// Need to learn node flow control
-function done () {
-  console.log("hacky exit until I learn node flow control");
-  process.exit(0);
-}
-setTimeout(done, 5000);
+
 
 
 

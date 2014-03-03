@@ -1,26 +1,16 @@
 
-Configuration:
- ☐ json config file to list repos to track
+Priority:
+ ☐ Save issues contribution activity (continue in github_logic.js)
+ ☐ Work our timing so script doesn't end suddenly
+   ☐ Setup a clear all and re-build option
+   ☐ Setup an update last few days option
 
 Documentation:
  ☐ All the config stuff
- ☐ A script to generate the db table?
+ ☐ Get latest scripts to generate the db table
 
 Testing:
  ☐ What do we use elsewhere?
-
-Getting data from Github:
- ☐ Look at existing modules for this
- ☐ Connect to the API
-
-Saving the data:
-☐ Function to clear the database
-
-Cron process:
-☐ Add data from the last [2] hours (overwrites should not duplicate)
-
-Querying the data:
-
 
  Exposing the data:
  ☐ API to query the data
@@ -30,8 +20,12 @@ Management tools:
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
 Archive:
- ✔ github API key details as an environment variable (document how to do this) @done (14-02-25 21:03) @project(Configuration)
- ✔ DB connection to be an ENV variable @done (14-02-26 11:18) @project(Configuration)
- ✔ Connect app to the database @done (14-02-25 21:03)
+ ✔ Check github api client isn't messy across multiple threads (re nextpage) @done (14-03-03 16:41) @project(Priority)
+ ✔ json config file to list repos to track @done (14-02-28 09:54) @project(Configuration)
+ ✔ Look at existing modules for this @done (14-02-28 09:54) @project(Getting data from Github)
+ ✔ Connect to the API @done (14-02-28 09:54) @project(Getting data from Github)
  ✔ Function to save a single item to the database @done (14-02-26 15:12)
+ ✔ DB connection to be an ENV variable @done (14-02-26 11:18) @project(Configuration)
+ ✔ github API key details as an environment variable (document how to do this) @done (14-02-25 21:03) @project(Configuration)
+ ✔ Connect app to the database @done (14-02-25 21:03)
  ✔ Setup a table in the database @done (14-02-25 16:57)

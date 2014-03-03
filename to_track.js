@@ -1,32 +1,31 @@
 exports.repos = {
 	"github_organizations": [
 		{
-			"name" : "Mozilla",
+			"name" : "mozilla", // as appears in github url
 				"teams" : [
 					{
-						"name" : "webmaker",
-						"repos" : [
-							'popcorn',
-							'thimble'
+						"name" : "webmaker", // internal reference for reporting
+						"repos" : [ // alphabetical keeps this easier to read
+							'login.webmaker.org',
+							'webmaker.org'
 						]
 					},
 					{
-						"name" : "badges",
+						"name" : "openbadges",
 						"repos" : [
-							'badgesite',
-							'badgekit'
+							'badgekit-issue'
 						]
 					}
 				]
 		},
 		{
-			"name" : "OpenNews",
+			"name" : "openNews",
 				"teams" : [
 					{
 						"name" : "OpenNews",
 						"repos" : [
-							'sourcesite',
-							'opennewsthing'
+							'dataset',
+							'NewsYourOwnAdventure'
 						]
 					}
 			]
