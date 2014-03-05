@@ -1,11 +1,25 @@
-var express = require("express");
-var logfmt = require("logfmt");
-var app = express();
+var express   = require("express");
+var cronJob   = require('cron').CronJob;
+var data      = require("./lib/data");
+var fetchData = require("./fetch_data");
 
-app.use(logfmt.requestLogger());
+var app       = express();
+
+// regularly ping github and get new activity
+new cronJob('0 */20 * * * *', function() {
+    // console.log('timing');
+    fetchData.pingGithubUpdateDB();
+}, null, true);
+
+
 
 app.get('/', function(req, res) {
-  res.send('Hello World! ' + process.env.TEST);
+  res.send('Hello World! ');
+});
+
+
+app.get('/api', function(req, res) {
+  res.send('API!');
 });
 
 var port = Number(process.env.PORT || 5000);

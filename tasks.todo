@@ -1,13 +1,11 @@
 
 Priority:
- ☐ Storing members in a seperate table makes the query more complex than is worthwhile
-   ☐ Simplify by saving the is_staff at time of writing
- ☐ Work our timing so script doesn't end suddenly
-   ☐ Setup a clear all and re-build option
-   ☐ Setup an update last few days option
+ ☐ Setup a clear all and re-build option
+ ☐ Setup an update last few days option
 
 Documentation:
  ☐ All the config stuff
+ ☐ Update live DB
  ☐ Get latest scripts to generate the db table
 
 Testing:
@@ -21,6 +19,9 @@ Management tools:
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
 Archive:
+ ✔ Work our timing so script doesn't end suddenly @done (14-03-05 10:29) @project(Priority)
+ ✔ Storing members in a seperate table makes the query more complex than is worthwhile @done (14-03-05 09:49) @project(Priority)
+ ✔ Simplify by saving the is_staff at time of writing @done (14-03-05 09:49) @project(Priority)
  ✔ Save issues contribution activity (continue in github_logic.js) @done (14-03-04 14:20) @project(Priority)
  ✔ Check github api client isn't messy across multiple threads (re nextpage) @done (14-03-03 16:41) @project(Priority)
  ✔ json config file to list repos to track @done (14-02-28 09:54) @project(Configuration)
