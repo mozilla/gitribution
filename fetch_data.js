@@ -55,23 +55,28 @@ function fetchAllTheData (orgs, callback) {
     }
   }
 
-  // two activities to save in parallel
-  async.parallel([
+  async.waterfall([
       function(callback){
+
         // Members activity
-        githubLogic.updateMembersLists(orgNames, function membersUpdated (err) {
+        githubLogic.getMembersLists(orgNames, function membersUpdated (err, res) {
           if (err) console.error(err);
-          else console.log("All organization member lists updated");
-          callback(null);
+          else console.log("Membership lists fetched for all organizations.");
+          callback(null, res);
         })
+
       },
-      function(callback){
+      function(res, callback){
+
+        var membersLists = res;
+
         // Commit activity
-        githubLogic.updateContributionActivityForList(repos, function contributionsUpdated (err, res) {
+        githubLogic.updateContributionActivityForList(repos, membersLists, function contributionsUpdated (err, res) {
           if (err) console.error(err);
           else console.log("All contribution activity updated");
           callback(null);
         })
+
       }
   ],
   function(err, results){
