@@ -26,9 +26,9 @@ exports.pingGithubUpdateDB = function pingGithubUpdateDB  () {
 // });
 
 
-fetchAllTheData(orgs, null, function allDataFetched () {
-  process.exit(0);
-});
+// fetchAllTheData(orgs, null, function allDataFetched () {
+//   process.exit(0);
+// });
 
 
 function fetchAllTheData (orgs, since, callback) {
