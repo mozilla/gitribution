@@ -6,7 +6,7 @@ exports.repos = {
           {
             "name" : "webmaker", // internal reference for reporting
             "repos" : [ // alphabetical keeps this easier to read
-              "webmaker.org",
+                "appmaker",
                 "appmaker-components",
                 "butter",
                 "eoy-fundraising",
@@ -36,7 +36,8 @@ exports.repos = {
                 "webmaker-profile",
                 "webmaker-profile-service",
                 "webmaker-suite",
-                "webmaker-ui"
+                "webmaker-ui",
+                "webmaker.org"
             ]
           },
           {

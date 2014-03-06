@@ -1,27 +1,19 @@
 
-Priority:
- ☐ Setup a clear all and re-build option (move into a seperate node file to run locally)
-
-Exposing the data:
-
-Other:
-  ☐ Link index to github documentation
-
-Documentation:
- ☐ All the config stuff
- ☐ Update live DB
- ☐ Get latest scripts to generate the db table
-
 Testing:
- ☐ What do we use elsewhere?
+ ☐ Would be good to learn some practices around unit testing
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
 Archive:
- ✔ API to query the data @done (14-03-06 15:34) @project(Exposing the data)
- ✔ Query unique non-staff usernames 12 months @done (14-03-06 15:34) @project(Exposing the data)
+ ✔ Update live DB @done (14-03-06 16:12) @project(Documentation)
+ ✔ Setup a clear all and re-build option (move into a seperate node file to run locally) @done (14-03-06 16:12) @project(Priority)
+ ✔ Link index to github documentation @done (14-03-06 16:12) @project(Other)
+ ✔ Get latest scripts to generate the db table @done (14-03-06 16:12) @project(Documentation)
+ ✔ All the config stuff @done (14-03-06 16:12) @project(Documentation)
  ✔ Query unique non-staff usernames 7 days @done (14-03-06 15:34) @project(Exposing the data)
- ✔ Cross check @done (14-03-06 15:34) @project(Exposing the data)
+ ✔ Query unique non-staff usernames 12 months @done (14-03-06 15:34) @project(Exposing the data)
  ✔ Output JSON @done (14-03-06 15:34) @project(Exposing the data)
+ ✔ Cross check @done (14-03-06 15:34) @project(Exposing the data)
+ ✔ API to query the data @done (14-03-06 15:34) @project(Exposing the data)
  ✔ Option to reset and rebuild the DB @done (14-03-06 08:22) @project(Management tools)
  ✔ Setup an update last few days option @done (14-03-06 08:20) @project(Priority)
  ✔ Work our timing so script doesn't end suddenly @done (14-03-05 10:29) @project(Priority)
