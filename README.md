@@ -26,3 +26,9 @@ foreman start web
 
 To run the script to fetch the latest data
 foreman start fetch
+
+
+= Reset
+heroku run bash
+node reset
+exit

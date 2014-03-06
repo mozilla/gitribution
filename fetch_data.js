@@ -16,19 +16,15 @@ exports.pingGithubUpdateDB = function pingGithubUpdateDB  () {
   });
 }
 
-// // Just using this while testing things
-// data.resetDatabaseYesIreallyWantToDoThis(function resetAttempted () {
-//   console.log('Reset Complete');
+exports.clearAndRebuildDB = function clearAndRebuildDB () {
+  data.resetDatabaseYesIreallyWantToDoThis(function resetAttempted () {
+    console.log('Database Reset Complete');
 
-//   fetchAllTheData(orgs, null, function allDataFetched () {
-//     process.exit(0);
-//   });
-// });
-
-
-// fetchAllTheData(orgs, null, function allDataFetched () {
-//   process.exit(0);
-// });
+    fetchAllTheData(orgs, null, function allDataFetched () {
+      process.exit(0);
+    });
+  });
+}
 
 
 function fetchAllTheData (orgs, since, callback) {
