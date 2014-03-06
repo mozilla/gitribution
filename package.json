@@ -2,6 +2,9 @@
   "name": "gitribution",
   "version": "0.0.0",
   "description": "App that takes data from github API and reformats for queries related to contribution",
+  "engines": {
+    "node": "0.10.x"
+  },
   "main": "web.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
