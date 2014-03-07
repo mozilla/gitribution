@@ -6,7 +6,6 @@ exports.repos = {
           {
             "name" : "webmaker", // internal reference for reporting
             "repos" : [ // alphabetical keeps this easier to read
-                "appmaker",
                 "appmaker-components",
                 "butter",
                 "eoy-fundraising",
@@ -72,7 +71,7 @@ exports.repos = {
         ]
     },
     {
-      "name" : "openNews",
+      "name" : "opennews",
         "teams" : [
           {
             "name" : "OpenNews",
@@ -83,6 +82,48 @@ exports.repos = {
               "opennews.github.com",
               "spiders",
               "zeit-online-republica-tracker"
+            ]
+          }
+      ]
+    },
+    {
+      "name" : "mozilla-appmaker",
+        "teams" : [
+          {
+            "name" : "appmaker",
+            "repos" : [
+              "appmaker",
+              "ceci",
+              "ceci-button",
+              "ceci-fork-me",
+              "ceci-support",
+              "chefbot",
+              "component-addform",
+              "component-alternating-gate",
+              "component-button",
+              "component-button-with-confirmation",
+              "component-camera-button",
+              "component-chat-window",
+              "component-counter",
+              "component-dataview",
+              "component-editform",
+              "component-fireworks",
+              "component-header",
+              "component-image",
+              "component-metronome",
+              "component-paypal",
+              "component-spacer",
+              "component-splitter",
+              "component-template",
+              "component-text-input",
+              "component-textbox",
+              "dashboard",
+              "haas",
+              "mozilla-appmaker.github.io",
+              "phonegap-appmaker-harness",
+              "start-here",
+              "tools",
+              "views",
             ]
           }
       ]

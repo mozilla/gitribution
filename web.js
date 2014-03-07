@@ -41,7 +41,7 @@ app.get('/api', function(req, res) {
 
   team = req.query.team;
   if (!team) {
-    res.end('Missing parameter: "team". E.g. webmaker, openbadges, openNews.');
+    res.end('Missing parameter: "team". E.g. webmaker, openbadges, opennews, appmaker.');
     return;
   }
 
