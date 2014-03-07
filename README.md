@@ -26,7 +26,7 @@ Set equivilent environment variables on Heroku
 ## Running the app:
 
 ```
-foreman start web
+foreman start
 ```
 
 ## Clear and rebuild the database
