@@ -130,7 +130,29 @@ exports.repos = {
               "phonegap-appmaker-harness",
               "start-here",
               "tools",
-              "views",
+              "views"
+            ]
+          }
+      ]
+    },
+    {
+      "name" : "swcarpentry",
+        "teams" : [
+          {
+            "name" : "sciencelab",
+            "repos" : [
+              "site"
+            ]
+          }
+      ]
+    },
+    {
+      "name" : "mozillascience",
+        "teams" : [
+          {
+            "name" : "sciencelab",
+            "repos" : [
+              "code-research-object"
             ]
           }
       ]
