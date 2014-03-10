@@ -67,14 +67,21 @@ exports.repos = {
               "openbadges-validator-service",
               "openbadges.org"
             ]
+          },
+          {
+            "name" : "opennews",
+            "repos" : [
+              "mozilla-opennews",
+              "source"
+            ]
           }
         ]
     },
     {
-      "name" : "opennews",
+      "name" : "openNews",
         "teams" : [
           {
-            "name" : "OpenNews",
+            "name" : "opennews",
             "repos" : [
               "amo",
               "NewsYourOwnAdventure",
