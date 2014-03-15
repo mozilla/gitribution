@@ -46,8 +46,7 @@ app.get('/api', function(req, res) {
   }
 
   data.getContributorCounts(date, team, function gotCounts (err, result) {
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify(result));
+    res.json(result);
   })
 });
 

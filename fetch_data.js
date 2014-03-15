@@ -20,10 +20,12 @@ exports.pingGithubUpdateDB = function pingGithubUpdateDB  () {
 }
 
 exports.clearAndRebuildDB = function clearAndRebuildDB () {
+  console.time('reset');
   data.resetDatabaseYesIreallyWantToDoThis(function resetAttempted () {
     console.log('Database Reset Complete');
 
     fetchAllTheData(orgs, null, function allDataFetched () {
+      console.timeEnd('reset');
       process.exit(0);
     });
   });
@@ -77,10 +79,11 @@ function fetchAllTheData (orgs, since, callback) {
       },
       function(res, callback){
 
-        var membersLists = res;
+        var membersList = res;
+        console.log(membersList.length);
 
         // Commit activity
-        githubLogic.updateContributionActivityForList(repos, membersLists, since, function contributionsUpdated (err, res) {
+        githubLogic.updateContributionActivityForList(repos, membersList, since, function contributionsUpdated (err, res) {
           if (err) console.error(err);
           else console.log("All contribution activity updated");
           callback(null);
