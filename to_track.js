@@ -46,6 +46,7 @@ exports.repos = {
                 "webmaker-analytics",
                 "webmaker-download-locales",
                 "webmaker-events",
+                "webmaker-events-2",
                 "webmaker-firehose",
                 "webmaker-profile",
                 "webmaker-profile-service",
