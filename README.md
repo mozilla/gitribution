@@ -7,7 +7,7 @@ Looks at the people (github logins) involved in:
 * commits
 * issues
 
-This app uses membership of the github organisations to flag staff. This is not 100% accurate, but a pretty good measure.
+This app uses membership of the github organisations to flag staff, plus a list of extra github logins in to_track.js. This is not 100% accurate, but a pretty good indicator of who is staff.
 
 ## Prerequisites:
 
@@ -18,10 +18,15 @@ This app uses membership of the github organisations to flag staff. This is not 
 ## Setup an activities table in mysql
 See script in sql/create_table.sql
 
-## Config 
+## Environment Config
 
 For local dev, copy sample.env to .env and add credentials
 Set equivilent environment variables on Heroku
+
+## Tracking Config
+```
+to_track.js
+```
 
 ## Running the app:
 
@@ -34,7 +39,5 @@ foreman start
 Run this script to clear and rebuild the database (useful if we change repo names or move around org accounts etc...)
 
 ```
-heroku run bash
-$ node reset.js
-$ exit
+foreman run node reset
 ```
