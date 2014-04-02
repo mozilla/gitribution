@@ -32,6 +32,7 @@ exports.repos = {
                 "make.mozilla.org",
                 "MakeAPI",
                 "makeapi-client",
+                "makerstrap",
                 "node-webmaker-loginapi",
                 "node-webmaker-postalservice",
                 "popcorn-docs",
