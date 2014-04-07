@@ -5,7 +5,7 @@ var githubLogic = require("./lib/github_logic");
 
 
 // Get our JSON config file
-var orgs = toTrack.repos['github_organizations'];
+var orgs = toTrack.repos.github_organizations;
 
 exports.pingGithubUpdateDB = function pingGithubUpdateDB  () {
   var since = new Date();
@@ -17,7 +17,7 @@ exports.pingGithubUpdateDB = function pingGithubUpdateDB  () {
   fetchAllTheData(orgs, since, function allDataFetched () {
     console.log('DB updated');
   });
-}
+};
 
 exports.clearAndRebuildDB = function clearAndRebuildDB () {
   console.time('reset');
@@ -29,14 +29,14 @@ exports.clearAndRebuildDB = function clearAndRebuildDB () {
       process.exit(0);
     });
   });
-}
+};
 
 
 function fetchAllTheData (orgs, since, callback) {
 
   // Iterate through the list of repos we care about
-  var orgNames = []
-  var repos = []
+  var orgNames = [];
+  var repos = [];
 
   for(var i = 0; i < orgs.length; i++) {
 
@@ -62,7 +62,7 @@ function fetchAllTheData (orgs, since, callback) {
           mozTeamName: mozTeamName,
           githubRepoName: githubRepoName
         });
-      };
+      }
     }
   }
 
@@ -74,7 +74,7 @@ function fetchAllTheData (orgs, since, callback) {
           if (err) console.error(err);
           else console.log("Membership lists fetched for all organizations.");
           callback(null, res);
-        })
+        });
 
       },
       function(res, callback){
@@ -87,7 +87,7 @@ function fetchAllTheData (orgs, since, callback) {
           if (err) console.error(err);
           else console.log("All contribution activity updated");
           callback(null);
-        })
+        });
 
       }
   ],
