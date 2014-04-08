@@ -7,15 +7,15 @@ var githubLogic = require("./lib/github_logic");
 // Get our JSON config file
 var orgs = toTrack.repos.github_organizations;
 
-exports.pingGithubUpdateDB = function pingGithubUpdateDB  () {
+exports.pingGithubUpdateDB = function pingGithubUpdateDB () {
   var since = new Date();
-
   // commit activity by date may get added to github later
   // so this allows some overlap to catch new contributions
   since.setDate(since.getDate() - 5);
 
   fetchAllTheData(orgs, since, function allDataFetched () {
-    console.log('DB updated');
+    console.log('== ## == Fetched Latest Numbers');
+    process.exit(0);
   });
 };
 

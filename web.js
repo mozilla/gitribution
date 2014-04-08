@@ -1,22 +1,12 @@
 var express   = require("express");
-var cronJob   = require('cron').CronJob;
 var data      = require("./lib/data");
 var fetchData = require("./fetch_data");
-
 var app       = express();
-
-// regularly ping github and get new activity
-new cronJob('0 */15 * * * *', function() {
-    // console.log('timing');
-    fetchData.pingGithubUpdateDB();
-}, null, true);
-
 
 
 app.get('/', function(req, res) {
   res.send("You're probably looking for /api or for more info about this app see https://github.com/adamlofting/gitribution");
 });
-
 
 app.get('/api', function(req, res) {
   var date = null;
