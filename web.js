@@ -1,3 +1,7 @@
+if ( process.env.NEW_RELIC_ENABLED ) {
+  require( "newrelic" );
+}
+
 var express   = require("express");
 var data      = require("./lib/data");
 var fetchData = require("./fetch_data");
