@@ -203,6 +203,25 @@ exports.repos = {
             ]
           }
       ]
+    },
+    {
+      "name" : "mozillafordevelopment",
+        "teams" : [
+          {
+            "name" : "webmaker",
+            "repos" : [
+              "webmaker-app-publisher",
+              "webmaker-app",
+              "beaker",
+              "webmaker-app-csvexport",
+              "webmaker-app-guide",
+              "Exploring-challenge",
+              "player",
+              "fieldresearch",
+              "mozillafordevelopment.github.io"
+            ]
+          }
+      ]
     }
   ]
 };
