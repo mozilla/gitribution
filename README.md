@@ -21,7 +21,7 @@ See script in sql/create_table.sql
 ## Environment Config
 
 For local dev, copy sample.env to .env and add credentials
-Set equivilent environment variables on Heroku
+Set equivalent environment variables on Heroku
 
 ## Tracking Config
 ```
